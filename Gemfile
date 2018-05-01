@@ -31,6 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'awesome_print', '~> 1.8'
 # UI design
 gem 'bootstrap', '~> 4.0'
 gem 'jquery-rails'
@@ -39,6 +40,8 @@ gem 'jquery-rails'
 
 # Engines
 # gem 'algorithms', git: 'git@github.com:coding-de-cool/nitin_edu_support.git'
+
+gem 'devise', '~> 4.2'
 
 gem 'haml-rails'
 

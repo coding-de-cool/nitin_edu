@@ -1,0 +1,43 @@
+= puts "----controller_name=#{controller_name}---#{action_name}---"
+= form_for @user do |f|
+  %div
+    = f.label :email
+    %br/
+    = f.email_field :email, autofocus: true, autocomplete: "email"
+  %div
+    = f.label :password
+    %br/
+    = f.password_field :password, autocomplete: "off"
+  %div
+    = f.label :password_confirmation
+    %br/
+    = f.password_field :password_confirmation, autocomplete: "off"
+  %div
+    = f.fields_for :address do |add|
+      %div
+        = add.label :first_name
+        %br/
+        = add.text_field :first_name
+      %div
+        = add.label :middle_name
+        %br/
+        = add.text_field :middle_name
+      %div
+        = add.label :last_name
+        %br/
+        = add.text_field :last_name
+      %div
+        = add.label :city
+        %br/
+        = add.text_field :city
+      %div
+        = add.label :state
+        %br/
+        = add.text_field :state
+      %div
+        = add.label :pincode
+        %br/
+        = add.text_field :pincode
+  %div
+    = f.submit "Sign up"
+= link_to 'Log In', new_user_session_path

@@ -7,4 +7,11 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    %div
+      - if flash.present?
+        = flash.each do |key, value|
+          = value
+    %div
+      - if user_signed_in?
+        = link_to 'Sign out', destroy_user_session_path, method: :delete
     = yield

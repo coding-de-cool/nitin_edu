@@ -31,3 +31,7 @@
 
 en:
   hello: "Hello world"
+  users:
+    create:
+      signed_up: 'Welcome! You have signed up, now you can signed in using your login credentials'
+      not_able_to_signed_up: 'Sorry! Sign up failed due to some errors.'
